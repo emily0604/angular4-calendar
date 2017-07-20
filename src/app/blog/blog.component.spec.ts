@@ -1,12 +1,12 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
+import { BlogComponent } from './blog.component';
 import { ChildrenOutletContexts } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('BlogComponent', () => {
+  let component: BlogComponent;
+  let fixture: ComponentFixture<BlogComponent>;
   let element, de;
 
   beforeEach(async(() => {
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        BlogComponent
       ],
       providers: [
         ChildrenOutletContexts
@@ -24,16 +24,16 @@ describe('AppComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(BlogComponent);
     component = fixture.componentInstance; // to access properties and methods
     element = fixture.nativeElement; // to access DOM element
     de = fixture.debugElement; // test helper
     fixture.detectChanges();
   });
 
-  it('should create the app', async(() => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
-  }));
+  });
 
   it('should has a router-outlet', () => {
     expect(element.querySelector('router-outlet')).toBeTruthy()

@@ -1,0 +1,5 @@
+<article *ngIf="blogPost">
+    <h3 *ngIf="blogPost.title.length" class="entry-title">{{blogPost.id}}. {{blogPost.title}}</h3>
+    <small *ngIf="blogPost.userId.length" class="entry-by">by {{blogPost.userId}}</small>
+    <p *ngIf="blogPost.body.length" class="entry-title">{{blogPost.body}}</p>
+</article>
